@@ -11,4 +11,13 @@ class Home extends CI_Controller {
         $date['subview']    = 'home';
         $this->load->view('master', $date);
     }
+
+    public function dashboard()
+    {
+        $data['title']      = 'App Dashboard';
+        $data['titlePage']  = 'Home Page';
+        $data['subview']    = 'home';
+
+        $this->load->view('layout', $data);
+    }
 }
