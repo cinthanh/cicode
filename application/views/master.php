@@ -10,6 +10,7 @@
 <body>
 <header>this is header</header>
 <div class="container">
+    <?php echo '<pre>'; print_r($menu); echo '</pre>';?>
     <?php $this->load->view($subview); ?>
 </div>
 <h4>footer</h4>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends MY_Controller {
 
     public function play()
     {
@@ -17,7 +17,10 @@ class Home extends CI_Controller {
         $data['title']      = 'App Dashboard';
         $data['titlePage']  = 'Home Page';
         $data['subview']    = 'home';
-
+//        $this->db->select('*');
+//        $query = $this->db->get('fs_admin');
+//        $data['product']    = $query->result_array();
+//        echo '<pre>'; print_r($data['product']); echo '</pre>';
         $this->load->view('layout', $data);
     }
 }
