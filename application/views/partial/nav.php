@@ -237,6 +237,27 @@
                 <li>
                     <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
+                <!--Product-menu-->
+                <li>
+                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Products<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <?php foreach ($menu as $key => $cate):?>
+                            <li>
+                                <a href="#"><?=$key?> <span class="fa arrow"></span></a>
+                                <?php foreach ($cate as $item):?>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="<?=$item['id']?>"><?=$item['name']?></a>
+                                        </li>
+                                    </ul>
+                                <?php endforeach;?>
+                                <!-- /.nav-third-level -->
+                            </li>
+                        <?php endforeach;?>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <!--/.Product-menu-->
                 <li>
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -275,36 +296,6 @@
                         </li>
                         <li>
                             <a href="grid.html">Grid</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Second Level Item</a>
-                        </li>
-                        <li>
-                            <a href="#">Second Level Item</a>
-                        </li>
-                        <li>
-                            <a href="#">Third Level <span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-third-level -->
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
