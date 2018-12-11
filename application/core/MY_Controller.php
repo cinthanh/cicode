@@ -12,9 +12,13 @@ class MY_Controller extends CI_Controller
     {
         parent::__construct();
 
-        $this->db->select('*');
-        $query = $this->db->get('fs_admin');
-        $menu['menu']  = $query->result_array();
+        // load Common_model
+        $this->load->model('Common_model');
+        $menu['menu'] = $this->Common_model->menu();
+
+//        $this->db->select('*');
+//        $query = $this->db->get('fs_admin');
+//        $menu['menu']  = $query->result_array();
         $this->load->vars($menu);
     }
 }
